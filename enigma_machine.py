@@ -13,10 +13,11 @@ with open('Schlusselblatt', 'r') as f:
 	#pick a message and encrypt it
 	MESSAGE = input("What is the message? :")
 	EM = machine.process_text(MESSAGE)
-	print("Encrypted message = ", EM , "\n")
+	print("Output message = ", EM , "\n")
 	
 	#decrypt message, just to double check
+	#we are using a copy of the machine, with the original configurations, to check the message to ensure it is functioning.
 	ED = machine1.process_text(EM)
-	print("Decrypted message = ", ED, "\n")
+	print("Input message = ", ED, "\n")
 
 print('Completed')

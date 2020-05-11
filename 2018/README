@@ -1,0 +1,5 @@
+This is some old files from when I deploied a wifi router and ran the challanged that way.
+The goal was for students to crack the wifi security, and intercept packets. 
+Then they could take those packets, and try to get ciphers out of them to decrypt.
+
+This was a bit ambitious, and only ever partialy worked.

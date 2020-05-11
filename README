@@ -1,0 +1,64 @@
+This folder contains everything I used for the enigma challange.
+
+Schlusselblatt is the codebook I created for cyberstorm. The first part is Army types, and the second half is navy types. I only really used army this year.
+
+html/ gets updated and pushed to the pi to serve to the students to access.
+
+index.odut was what I started the day with.
+The final webpage is in html/, this is what was there at the end of cyberstorm.
+
+enigma_machine.py was just a simple script, creating machines from the codebook, to check to make sure everything was working.
+It is also useful to quickly encrypt a message for demoing.
+
+if you encrypt: aaaaaaaaaaaaaaaaaaaaaaaaaa
+with day 1 code from the codebook
+you get			WUOHMWPIUTRHSUKNMUMYQGZTGO 
+Which is useful to who how a number gets mapped to different numbers as the message is processed. The rotors turn with each keypress, so the encryption changes. This is why the nazis thought they had perfect encryption. The problem is a letter can not be encrypted to itself. notice that the encrypted message contains no a's. This was the primary weakness that was exploited.
+
+
+The TCP challange was set up where two pi's send encrypted messages to each other. It was intended that the students would have to break the wifi encryption, then sniff the packets. The server would always end the message with the same thing "yes sir". This could be exploited if communicated to the students. Last year I had it set up with many different messages, this year I only had one long message.
+
+Word of warning, I am 90% sure there is a bug when using the machine.set_display() method for very complex machines. Set the ring setting when making the machine instead.
+I have not been able to replicate this bug, but two different students had this issue. So maybe caution away from the set_display() method? I still think the students were doing something wrong, but I still do not know what.
+
+
+
+I wanted to have a challange where the students would have to break the encryption, only knowing that it was an army message. However, the numbers probably will not allow this to work. 
+
+Restricted Army:
+
+3 rotors and any position:		3*2*1=		6
+rotor settings:					26*26*26=	17,576
+Reflectors:						B or C		2
+Plugboards:			26!/(6!*10!*2^10)=		150,738,274,937,250	
+
+Total possible machines = 					31,792,511,043,565,272,000
+
+31 quintillion
+31 billion billion
+...
+
+So yeah, knew it got crazy when you factor in the plugboard.
+But geez.
+
+
+It is worse for navy
+
+Rotor names			Enigma Models
+I, II, III, IV, V	All Wehrmacht models
+VI, VII, VIII		Kriegsmarine M3 & M4
+Beta, Gamma			Kriegsmarine M4 (with thin reflectors)
+
+So
+3 OR 4 rotors, from a choice up to 10 rotors	(10*9*8)*(10*9*8*7)=	3,628,800
+rotor settings:									26^3*26^4=				8,031,810,176
+Reflectors:									B or C	or B-thin or C-thin	4
+Plugboards (the same):							26!/(6!*10!*2^10)=		150,738,274,937,250	
+Total possible machines = 												17,573,570,211,428,925,608,846,131,200,000
+
+Now, this is a larger number than it actually is.
+Because the b and c thin refelctors were only used with the beta and gamma rotors.
+The math may not be quite right either, this was more of a napkin calculation.
+But at this point the number is meaningless anyway.
+17 nonillion
+17 thousand billion billion billion

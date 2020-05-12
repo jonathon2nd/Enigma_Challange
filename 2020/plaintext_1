@@ -1,0 +1,12 @@
+Wow, great job! you will find that many chars are stripped from these messages, like numbers and symbols.
+Also, lucky you, there are no xs used in any of these machines. You can think of these configuration of the enigma machine as the 'key' to break the cipher.
+You will also want to know that this cipher is symetric, becasue the same enigma machine configuration is used to decypt a message that has ben encrypted.
+
+So, what happens next? You need to decrypt the next message.
+Here is a hint:
+We know the plugboard: QZ WX EC RV TB YN UM IK OL PA
+We know that rotors I, II, and III are used, but we don't know what order.
+We don't know what reflector is being used.
+We know the ring settings F O M, but we don't know what order they are in.
+
+Passphrase for this level:  Read 'Em and Weep

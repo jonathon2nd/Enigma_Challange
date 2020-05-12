@@ -1,0 +1,27 @@
+Each challange has a codeword or phrase to get points for doing the challange.
+A machine configuration cna be thought of as a key
+
+Challange 1: simple cipher
+	Output: hints for the machine/key for challange 2
+	The passphrase: Read 'Em and Weep
+	Key from codebook: 1
+
+Challange 2: simple cipher
+	Output: hints for the machine/key for challange 3
+	The passphrase: Short End of the Stick
+	Key from codebook: 3
+
+Challange 3: long cipher
+	The passphrase: Elvis Has Left The Building
+	Key from codebook: 5
+
+Challange 4: hard cipher
+	Output: a very long codebook, which one of them is the needed machine/key to solve challange 5
+	The passphrase: On the Ropes
+	Key from codebook: 7
+
+Challange 5: very hard cipher
+	Challange 5 gives no hints, and can only be solved with the decrypted codebook from solving challange 4
+	The final passphrase: Don't Count Your Chickens Before They Hatch
+	Key from codebook: From long list that is plaintext_4_codebook. Going to add it to the codebook for easy use, 20
+	III I IV C Z Y DR VB TE GO UL SJ KQ PW AN CI C 
